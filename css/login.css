@@ -1,0 +1,108 @@
+body {
+    background-color: #222222;
+    /*2f3236*/
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-wrap {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 420px;
+}
+
+.logo {
+    width: 140px;
+    user-select: none;
+}
+
+form.login-form {
+    
+    padding: 30px !important;
+    /*background-color: rgb(54, 54, 65);
+    border-radius: 7px;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    */
+}
+
+form span {
+    font-size: .9em;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+.form-label {
+    margin-bottom: 4px;
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.input-wrap input {
+    border: none !important;
+    border-radius: 10px;
+    padding: 5px 12px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    color: black;
+}
+
+.login-wrap input {
+    padding-left: 45px;
+    height: calc(3.5rem + 2px) !important;
+}
+
+.login-wrap i {
+    font-size: 1.2em;
+    position: absolute;
+    top: 20px;
+    padding-left: 16px;
+    color: #888;
+}
+
+.login-form .btn[type="submit"] {
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    padding: 0;
+    outline: none;
+}
+
+form .blue {
+    background: linear-gradient(45deg, rgba(0,104,175,1) 0%, rgba(30,163,255,1) 50%, rgba(107,210,255,1) 100%) !important;
+}
+
+form .yellow {
+    background: linear-gradient(45deg, rgba(201,107,0,1) 0%, rgba(240,155,0,1) 55%, rgba(255,200,0,1) 100%) !important;
+}
+
+.alert {
+    border-radius: 10px;
+    margin-bottom: 0 !important;
+}
+
+.alert-danger {
+    border: 1px solid salmon;
+}
+
+.alert-success {
+    border: 1px solid green;
+}
+
+label {
+    color: dodgerblue;
+}
+
+.form-wrap span{
+    color: white;
+}

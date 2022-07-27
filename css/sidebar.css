@@ -1,0 +1,83 @@
+#sidebar {
+    position: fixed;
+    width: 280px;
+    height: 100vh;
+}
+
+.logo {
+    width: 40px;
+    user-select: none;
+    display: block;
+    margin-right: .8em;
+}
+
+.logo-wrap span{
+    font-family: sans-serif;
+    font-family: 'Jomhuria', cursive;
+    font-size: 3em;
+    color: white;
+    text-decoration: none;
+    line-height: 1;
+    display: block;
+    margin-top: 8px;
+}
+
+.nav-link {
+    cursor: pointer;
+    user-select: none;
+    border-radius: .25em;
+}
+
+#user-collapse {
+    padding: 0 16px;
+    margin-top: 5px;
+}
+
+#user-collapse ul {
+    background-color: #1d1d1d;/*#2f3236*/
+    border-radius: 6px;
+}
+
+#user-collapse li {
+    line-height: 1.2em;
+}
+
+.nav-link.active {
+    background-color: royalblue !important;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    background-color: rgb(61, 61, 61);
+}
+
+.nav-link:active {
+    background-color: rgb(86, 122, 230);
+}
+
+#user-toggle {
+    height: 40px;
+}
+
+#user-toggle::after {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 600; 
+    content: "\f107";
+    font-size: 1.2em;
+    margin-left: auto;
+    transition: .3s ease;
+}
+
+#user-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+#sidebar i {
+    margin-right: 6px;
+}
+
+.fa-user-circle {
+    padding-top: 3px;
+    padding-left: 2px;
+    padding-right: 6px;
+}
