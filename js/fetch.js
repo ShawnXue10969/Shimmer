@@ -14,7 +14,7 @@ async function loadLeaderboard(region) {
     const response = await fetch(url);
     const data = await response.json();
     const rankings = data.rankings;
-    console.log(rankings);
+    
     if (rankings.length == 0) {
         var e = document.createElement("p");
         e.innerHTML = 'The whole leaderboard has been loaded!';
