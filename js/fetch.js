@@ -75,8 +75,6 @@ async function loadLeaderboard(region) {
             dps: dps
         };
 
-        console.log(rankItem);
-
         //create the rank item DOM element
         var e = document.createElement("div");
         e.className = 'row d-flex justify-content-between';
