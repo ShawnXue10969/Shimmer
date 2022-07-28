@@ -8,7 +8,14 @@ var page = 0;
 async function loadLeaderboard(region) {
     var loadBtn = document.querySelector(".spinner-border");
     loadBtn.classList.remove("visually-hidden");
-    if (page == 5) {
+    
+    const url = 'https://raider.io/api/v1/mythic-plus/runs?season=season-sl-1&region='+region+'&dungeon=all&page='+page;
+    page += 1;
+    const response = await fetch(url);
+    const data = await response.json();
+    const rankings = data.rankings;
+    console.log(rankings);
+    if (rankings.length == 0) {
         var e = document.createElement("p");
         e.innerHTML = 'The whole leaderboard has been loaded!';
         document.querySelector("#lb").appendChild(e);
@@ -18,14 +25,6 @@ async function loadLeaderboard(region) {
         loadBtn.scrollIntoView();
         return;
     }
-    else if (page > 5) {
-        return;
-    }
-    const url = 'https://raider.io/api/v1/mythic-plus/runs?season=season-sl-1&region='+region+'&dungeon=all&page='+page;
-    page += 1;
-    const response = await fetch(url);
-    const data = await response.json();
-    const rankings = data.rankings;
 
     rankings.forEach(i => {
         var run = i.run;
@@ -149,4 +148,4 @@ function ms2Time(duration) {
   return hours + ":" + minutes + ":" + seconds;
   }
 
-loadLeaderboard('world', 2);
+loadLeaderboard('world');
