@@ -13,8 +13,9 @@ async function loadLeaderboard(region) {
     const response = await fetch(url);
     const data = await response.json();
     const rankings = data.rankings;
+    const error = data.error;
     
-    if (rankings.length == 0 || page == 5) {
+    if (error) {
         var e = document.createElement("p");
         e.innerHTML = 'The whole leaderboard has been loaded!';
         document.querySelector("#lb").appendChild(e);
