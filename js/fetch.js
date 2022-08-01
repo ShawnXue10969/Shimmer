@@ -15,7 +15,7 @@ async function loadLeaderboard(region) {
     const data = await response.json();
     const rankings = data.rankings;
     
-    if (rankings.length == 0) {
+    if (rankings.length == 0 || page == 5) {
         var e = document.createElement("p");
         e.innerHTML = 'The whole leaderboard has been loaded!';
         document.querySelector("#lb").appendChild(e);
@@ -23,6 +23,9 @@ async function loadLeaderboard(region) {
         loadBtn.classList.add("visually-hidden");
         loadBtn.parentElement.disabled = true;
         loadBtn.scrollIntoView();
+        return;
+    } else if (page > 5) {
+        console.log("Bad page request");
         return;
     }
 

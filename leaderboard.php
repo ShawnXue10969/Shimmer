@@ -2,7 +2,7 @@
 
 <div class="main">
     <div id="lb-wrap">
-        <h1>Mythic+ Timed Run Leaderboard</h1>
+        <h1>Mythic+ Timed Run Top 100 Leaderboard</h1>
         <div id="lb">
             <div class="row d-flex justify-content-between">
                 <div class="dungeon-wrap col-md-3 col-xl-4 d-flex justify-content-between">
