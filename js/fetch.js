@@ -10,7 +10,6 @@ async function loadLeaderboard(region) {
     loadBtn.classList.remove("visually-hidden");
     
     const url = 'https://raider.io/api/v1/mythic-plus/runs?season=season-sl-3&region='+region+'&dungeon=all&page='+page;
-    page += 1;
     const response = await fetch(url);
     const data = await response.json();
     const rankings = data.rankings;
@@ -28,6 +27,8 @@ async function loadLeaderboard(region) {
         console.log("Bad page request");
         return;
     }
+
+    page += 1;
 
     rankings.forEach(i => {
         var run = i.run;
