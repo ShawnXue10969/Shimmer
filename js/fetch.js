@@ -9,7 +9,7 @@ async function loadLeaderboard(region) {
     var loadBtn = document.querySelector(".spinner-border");
     loadBtn.classList.remove("visually-hidden");
     
-    const url = 'https://raider.io/api/v1/mythic-plus/runs?season=season-sl-1&region='+region+'&dungeon=all&page='+page;
+    const url = 'https://raider.io/api/v1/mythic-plus/runs?season=season-sl-3&region='+region+'&dungeon=all&page='+page;
     page += 1;
     const response = await fetch(url);
     const data = await response.json();
